@@ -24,6 +24,7 @@ while counter <=100 :
  
   #click the URL!!
   (status,output) = commands.getstatusoutput("/usr/bin/wget http://star.sznsibi.org/vote.ashx?id=2560")
+  
   print counter, new_gip
   #Sleep for 2 seconds
   (status,output) = commands.getstatusoutput("/bin/sleep 10")
