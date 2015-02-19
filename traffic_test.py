@@ -14,7 +14,7 @@ url_num = 0
 # Define an output queue
 output = mp.Queue()
 
-MAX_THREAD_NUM = 1000
+MAX_THREAD_NUM = 700
 
 proxy_url='10.0.0.204:80'
 urls = [
@@ -99,14 +99,17 @@ if __name__ == '__main__':
 
     print ("test start....")
     # Setup a list of processes that we want to run
+    print "add it into thead queue...."
     processes = [mp.Process(target=accesswithOutput, args=(proxy_url,)) for x in range(MAX_THREAD_NUM)]
     #processes = [mp.Process(target=accesswithOutput, args=('',)) for x in range(MAX_THREAD_NUM)]
     # Run processes
+    print "thread start..."
     for p in processes:
         p.start()
-    # Exit the completed processes
+    # Exit the completed processes    
     for p in processes:
         p.join()
+    print "thread exit!"
     # Get process results from the output queue
     results = [output.get() for p in processes]
     time_sum=0
