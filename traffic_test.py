@@ -9,11 +9,12 @@ import multiprocessing as mp
 procs_id = 0
 procs = {}
 procs_data = []
+url_num = 0
 
 # Define an output queue
 output = mp.Queue()
 
-MAX_THREAD_NUM = 100
+MAX_THREAD_NUM = 1000
 
 proxy_url='10.0.0.204:80'
 urls = [
@@ -39,8 +40,10 @@ def getInfoForCurl(url,proxy=''):
     return [url,proxy,end_time - start_time]
 
 def accesswithOutput(proxyUrl):
-    info = getInfoForCurl(random.choice(urls),proxyUrl)
+    for x in range(5):
+        info = getInfoForCurl(random.choice(urls),proxyUrl)
     output.put(info)
+    #url_num = url_num + 1
     print (info)
 
 
@@ -64,7 +67,7 @@ def runCommand(cmd, use_shell = False, return_stdout = False, busy_wait = False,
     procs[proc_id] = proc
     procs_id += 1
     data = { }
-    print(proc_id)
+    #print(proc_id)
     while busy_wait:
         returncode = proc.poll()
         if returncode == None:
@@ -90,10 +93,11 @@ def runCommand(cmd, use_shell = False, return_stdout = False, busy_wait = False,
 #Main function    
 if __name__ == '__main__':
     #warmup for ATS
+    print ("warmup start....")
     for url in urls:
         getInfoForCurl(url,proxy_url)
 
-
+    print ("test start....")
     # Setup a list of processes that we want to run
     processes = [mp.Process(target=accesswithOutput, args=(proxy_url,)) for x in range(MAX_THREAD_NUM)]
     #processes = [mp.Process(target=accesswithOutput, args=('',)) for x in range(MAX_THREAD_NUM)]
