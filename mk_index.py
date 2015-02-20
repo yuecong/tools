@@ -1,17 +1,26 @@
 # build_index.py
 
-FILE_URL = "http://apps.sloanahrens.com/qbox-blog-resources/kaggle-titanic-data/test.csv"
-
+FILE_PATH = "./squid.log.1"
 ES_HOST = {
     "host" : "10.0.0.158", 
     "port" : 9200
 }
 
-INDEX_NAME = 'titanic'
-TYPE_NAME = 'passenger'
+INDEX_NAME = 'ats'
+TYPE_NAME = 'accesslog'
 
-ID_FIELD = 'passengerid'
+logFile = open(FILE_PATH,'r')
+for line in logFile:
+    line= line.replace("\n","")
+    items=line.split(' ')
+    #one example
+    # ['1424376277.821', '0', '10.0.0.210', 'TCP_MEM_HIT/200',
+    # '86949', 'GET', 'http://www.citrix.co.jp/products.html?posit=glnav', '-', 'NONE/-', 'text/html']
 
+from elasticsearch import Elasticsearch
+bulk_data = [] 
+
+"""
 import csv
 import urllib2
 
@@ -34,7 +43,6 @@ for row in csv_file_object:
         "index": {
         	"_index": INDEX_NAME, 
         	"_type": TYPE_NAME, 
-        	"_id": data_dict[ID_FIELD]
         }
     }
     bulk_data.append(op_dict)
@@ -74,3 +82,5 @@ print(" response: '%s'" % (res))
 print("results:")
 for hit in res['hits']['hits']:
     print(hit["_source"])
+"""
+
