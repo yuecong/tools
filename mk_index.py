@@ -21,7 +21,7 @@ def indexPrepare():
         print("deleting '%s' index..." % (INDEX_NAME))
         res = es.indices.delete(index = INDEX_NAME)
         print(" response: '%s'" % (res))
-    """
+    
     request_body = {
         "mappings" : {
             "accesslog" : {
@@ -71,13 +71,7 @@ def indexPrepare():
             "number_of_replicas": 0
         }
     }
-    """
-    request_body = {
-        "settings" : {
-            "number_of_shards": 1,
-            "number_of_replicas": 0
-        }
-    }
+
     if not es.indices.exists(INDEX_NAME):
         print("creating '%s' index..." % (INDEX_NAME))
         res = es.indices.create(index = INDEX_NAME, body = request_body)
@@ -101,7 +95,7 @@ def indexBulkData():
             }
         }
         data_dict = {
-            'accessTime': datetime.datetime.fromtimestamp(float(items[0])).strftime('%Y-%m-%d %H:%M:%S'), #The client request timestamp
+            'accessTime': datetime.datetime.fromtimestamp(float(items[0])).strftime('%Y%m%dT%H:%M:%SZ'), #The client request timestamp
             'spentTime': items[1], #The time Traffic Server spent processing the client request. 
                                    #The number of milliseconds between the time the client established the connection with Traffic Server 
                                    #and the time Traffic Server sent the last byte of the response back to the client.
@@ -126,6 +120,7 @@ def indexBulkData():
         if line_cnt == COMMIT_DATA_PER_TIME:
             # bulk index the data
             #print("bulk indexing...")
+            #print(bulk_data)
             res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
             #print(" response: '%s'" % (res))
             line_cnt =0
