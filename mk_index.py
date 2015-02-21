@@ -95,7 +95,7 @@ def indexBulkData():
             }
         }
         data_dict = {
-            'accessTime': datetime.datetime.fromtimestamp(float(items[0])).strftime('%Y%m%dT%H:%M:%SZ'), #The client request timestamp
+            'accessTime': datetime.datetime.fromtimestamp(float(items[0])).strftime('%Y-%m-%dT%H:%M:%SZ'), #The client request timestamp
             'spentTime': items[1], #The time Traffic Server spent processing the client request. 
                                    #The number of milliseconds between the time the client established the connection with Traffic Server 
                                    #and the time Traffic Server sent the last byte of the response back to the client.
