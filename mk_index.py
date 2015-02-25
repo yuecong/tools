@@ -133,7 +133,7 @@ def indexBulkData():
         if line_cnt == COMMIT_DATA_PER_TIME:
             # bulk index the data
             #print("bulk indexing...")
-            print(bulk_data)
+            #print(bulk_data)
             #res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
             helpers.bulk(es,bulk_data)
             es.indices.refresh()
