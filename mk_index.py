@@ -1,3 +1,4 @@
+#python mk_index.py & excute it in backgroud
 # import data from squid.blod of traffic server to elastic search
 import datetime
 from elasticsearch import Elasticsearch
@@ -20,7 +21,7 @@ INDEX_NAME = 'ats'
 TYPE_NAME = 'accesslog'
 COMMIT_DATA_PER_TIME =5000
 bulk_data = []
-
+POLL_INTERVAL = 10 #10 seconds
 #For runCommand
 procs_id = 0
 procs = {}
@@ -227,9 +228,12 @@ def prepareLogFile():
 
 #Main function    
 if __name__ == '__main__':
-    if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
-        #print("Inserting...")
-        indexPrepare()
-        indexBulkData()
+   while True: 
+        if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
+            #print("Inserting...")
+            indexPrepare()
+            indexBulkData()
+        time.sleep(POLL_INTERVAL)
+        
 
 
