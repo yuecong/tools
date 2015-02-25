@@ -2,6 +2,7 @@
 import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
+import os.path
 
 FILE_PATH_BLOG = "/usr/local/var/log/trafficserver/squid.blog"
 FILE_PATH = "./squid.log.elasticsearch"
@@ -155,9 +156,9 @@ def indexBulkData():
     res = es.search(index = INDEX_NAME, size=3, body={"query": {"match_all": {}}})
     #print(" response: '%s'" % (res))
 def prepareLogFile():
-    bLogFile = open(FILE_PATH,'r')
-    if bLogFile == null:
-        return false;
+    result = True
+    result = os.path.isfile(FILE_PATH_BLOG)
+    return result
 
 
 if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
