@@ -18,11 +18,12 @@ bulk_data = []
 es = Elasticsearch(hosts = [ES_HOST])
 
 def indexPrepare():
+    """
     if es.indices.exists(INDEX_NAME):
         print("deleting '%s' index..." % (INDEX_NAME))
         res = es.indices.delete(index = INDEX_NAME)
         print(" response: '%s'" % (res))
-    
+    """
     request_body = {
         "mappings" : {
             "accesslog" : {
@@ -37,6 +38,9 @@ def indexPrepare():
                   "cacheResult" : {
                     "type" : "string"
                   },
+                  "cacheCode" : {
+                    "type" : "long"
+                  },
                   "clientIP" : {
                     "type" : "string"
                   },
@@ -50,10 +54,12 @@ def indexPrepare():
                     "type" : "string"
                   },
                   "requestMethod" : {
-                    "type" : "string"
+                    "type" : "string",
+                    "index" : "not_analyzed"
                   },
                   "requestURL" : {
-                    "type" : "string"
+                    "type" : "string",
+                    "index" : "not_analyzed"
                   },
                   "responseCode" : {
                     "type" : "long"
@@ -68,7 +74,7 @@ def indexPrepare():
           }
         },
         "settings" : {
-            "number_of_shards": 1,
+            "number_of_shards": 5,
             "number_of_replicas": 0
         }
     }
@@ -88,25 +94,16 @@ def indexBulkData():
         #one example
         # ['1424376277.821', '0', '10.0.0.210', 'TCP_MEM_HIT/200',
         # '86949', 'GET', 'http://www.citrix.co.jp/products.html?posit=glnav', '-', 'NONE/-', 'text/html']
-        """
-        op_dict = {
-            "index": {
-                "_index": INDEX_NAME, 
-                "_type": TYPE_NAME, 
-                "_id": items[0]
-            }
-        }
-
-        op_dict = {
-            "_index": INDEX_NAME, 
-            "_type": TYPE_NAME, 
-            "_id": items[0],
-        }
-        """
+        cacheCode =0
+        # refer to squid-netscape-result-codes
+        #https://www.websense.com/content/support/library/web/v78/wcg_help/cachrslt.aspx
+        #Cache Hit : tcp_hit,tcp_refresh_hit, tcp_mem_hit, tcp_ims_hit
+        cacheResult = items[3].split('/')[0].lower()
+        if (cacheResult == "tcp_hit" or cacheResult == "tcp_ims_hit" or cacheResult == "tcp_mem_hit" or cacheResult == "tcp_refresh_hit" ):
+            cacheCode = 1
         data_dict = {
         "_index": INDEX_NAME, 
         "_type": TYPE_NAME, 
-        "_id": items[0],        
         "_source": {
                 'accessTime': datetime.datetime.fromtimestamp(float(items[0])).strftime('%Y-%m-%dT%H:%M:%SZ'), #The client request timestamp
                 'spentTime': items[1], #The time Traffic Server spent processing the client request. 
@@ -114,6 +111,7 @@ def indexBulkData():
                                        #and the time Traffic Server sent the last byte of the response back to the client.
                 'clientIP': items[2], #The IP address of the client's host machine.
                 'cacheResult': items[3].split('/')[0], #The cache result code; how the cache responded to the request: HIT, MISS, and so on. 
+                'cacheCode' : cacheCode, #1 Cache Hit(), 0 Cache MISS()
                 'responseCode': items[3].split('/')[1], #The proxy response status code (the HTTP response status code from Traffic Server to client
                 'contentLength': items[4], #The length of the Traffic Server response to the client in bytes, including headers and content.
                 'requestMethod': items[5], #The client request method: GET, POST, and so on.
