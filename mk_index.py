@@ -3,7 +3,7 @@ import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 
-FILE_PATH = "./squid.log.1"
+FILE_PATH = "./squid.log.elasticsearch"
 ES_HOST = {
     "host" : "10.0.0.158", 
     "port" : 9200
