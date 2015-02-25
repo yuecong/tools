@@ -89,6 +89,7 @@ def indexBulkData():
     logFile = open(FILE_PATH,'r')
     line_cnt= 0
     for line in logFile:
+        #print line
         line= line.replace("\n","")
         items=line.split(' ')
         #one example
@@ -132,7 +133,7 @@ def indexBulkData():
         if line_cnt == COMMIT_DATA_PER_TIME:
             # bulk index the data
             #print("bulk indexing...")
-            #print(bulk_data)
+            print(bulk_data)
             #res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
             helpers.bulk(es,bulk_data)
             es.indices.refresh()
@@ -141,14 +142,16 @@ def indexBulkData():
             bulk_data = []
             #res = es.count(index= INDEX_NAME, doc_type= TYPE_NAME, body={"query": {"match_all": {}}})
             #print(" response: '%s'" % (res))
-if len(bulk_data) >0:
-    #res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
-    res = helpers.bulk(es,bulk_data)
-    es.indices.refresh()
+    #print(bulk_data)
+    if len(bulk_data) >0:
+      #res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
+        #print bulk_data
+        res = helpers.bulk(es,bulk_data)
+        es.indices.refresh()
     # sanity check
-    print("searching...")
+    #print("searching...")
     res = es.search(index = INDEX_NAME, size=3, body={"query": {"match_all": {}}})
-    print(" response: '%s'" % (res))
+    #print(" response: '%s'" % (res))
 
 indexPrepare()
 indexBulkData()
