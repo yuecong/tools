@@ -3,7 +3,9 @@ import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 
+FILE_PATH_BLOG = "/usr/local/var/log/trafficserver/squid.blog"
 FILE_PATH = "./squid.log.elasticsearch"
+
 ES_HOST = {
     "host" : "10.0.0.158", 
     "port" : 9200
@@ -152,8 +154,15 @@ def indexBulkData():
     #print("searching...")
     res = es.search(index = INDEX_NAME, size=3, body={"query": {"match_all": {}}})
     #print(" response: '%s'" % (res))
+def prepareLogFile():
+    bLogFile = open(FILE_PATH,'r')
+    if bLogFile == null:
+        return false;
 
-indexPrepare()
-indexBulkData()
+
+if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
+    print("Inserting...")
+    indexPrepare()
+    indexBulkData()
 
 
