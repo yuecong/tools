@@ -1,27 +1,36 @@
-# build_index.py
+# import data from squid.blod of traffic server to elastic search
 import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 import os.path
+import psutil
+import subprocess
 
+#Log data information
 FILE_PATH_BLOG = "/usr/local/var/log/trafficserver/squid.blog"
+FILE_PATH_BLOG_TMP ="/usr/local/var/log/trafficserver/squid.blog_tmp"
 FILE_PATH = "./squid.log.elasticsearch"
 
+#ES information
 ES_HOST = {
     "host" : "10.0.0.158", 
     "port" : 9200
 }
-
 INDEX_NAME = 'ats'
 TYPE_NAME = 'accesslog'
 COMMIT_DATA_PER_TIME =5000
 bulk_data = []
 
+#For runCommand
+procs_id = 0
+procs = {}
+procs_data = []
+
 # create ES client, create index
 es = Elasticsearch(hosts = [ES_HOST])
 
 def indexPrepare():
-    """
+    """ #delete index
     if es.indices.exists(INDEX_NAME):
         print("deleting '%s' index..." % (INDEX_NAME))
         res = es.indices.delete(index = INDEX_NAME)
@@ -92,10 +101,9 @@ def indexBulkData():
     logFile = open(FILE_PATH,'r')
     line_cnt= 0
     for line in logFile:
-        #print line
         line= line.replace("\n","")
         items=line.split(' ')
-        #one example
+        #data example
         # ['1424376277.821', '0', '10.0.0.210', 'TCP_MEM_HIT/200',
         # '86949', 'GET', 'http://www.citrix.co.jp/products.html?posit=glnav', '-', 'NONE/-', 'text/html']
         cacheCode =0
@@ -137,17 +145,13 @@ def indexBulkData():
             # bulk index the data
             #print("bulk indexing...")
             #print(bulk_data)
-            #res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
             helpers.bulk(es,bulk_data)
             es.indices.refresh()
             #print(" response: '%s'" % (res))
             line_cnt =0
             bulk_data = []
-            #res = es.count(index= INDEX_NAME, doc_type= TYPE_NAME, body={"query": {"match_all": {}}})
-            #print(" response: '%s'" % (res))
     #print(bulk_data)
     if len(bulk_data) >0:
-      #res = es.bulk(index = INDEX_NAME, body = bulk_data, refresh = True)
         #print bulk_data
         res = helpers.bulk(es,bulk_data)
         es.indices.refresh()
@@ -155,15 +159,83 @@ def indexBulkData():
     #print("searching...")
     res = es.search(index = INDEX_NAME, size=3, body={"query": {"match_all": {}}})
     #print(" response: '%s'" % (res))
+
+# Runs command silently
+def runCommand(cmd, use_shell = False, return_stdout = False, busy_wait = False, poll_duration = 0.5):
+    # Sanitize cmd to string
+    cmd = map(lambda x: '%s' % x, cmd)
+    if return_stdout:
+        proc = psutil.Popen(cmd, shell = use_shell, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+    else:
+        proc = psutil.Popen(cmd, shell = use_shell, 
+                                stdout = open('/dev/null', 'w'),
+                                stderr = open('/dev/null', 'w'))
+
+
+    global procs_id 
+    global procs
+    global procs_data
+    proc_id = procs_id
+    procs[proc_id] = proc
+    procs_id += 1
+    data = { }
+    #print(proc_id)
+    while busy_wait:
+        returncode = proc.poll()
+        if returncode == None:
+            try:
+                data = proc.as_dict(attrs = ['get_io_counters', 'get_cpu_times'])
+            except Exception as e:
+                pass
+            time.sleep(poll_duration)
+        else:
+            break
+
+    (stdout, stderr) = proc.communicate()
+    returncode = proc.returncode
+    del procs[proc_id]
+
+    if returncode != 0:
+        raise Exception(stderr)
+    else:
+        if data:
+            procs_data.append(data)
+        return stdout
+
+#Conver squid.blog to squid.log.elasticsearch if exists
 def prepareLogFile():
     result = True
     result = os.path.isfile(FILE_PATH_BLOG)
+    if os.path.isfile(FILE_PATH)
+        #rm -f ./squid.log.elasticsearch
+        cmd = ['rm','-f', FILE_PATH]
+        print(cmd,)
+        runCommand(cmd, return_stdout = False, busy_wait = True)
+    if result: #In case squid.blog exsits
+        #mv /usr/local/var/log/trafficserver/squid.blog /usr/local/var/log/trafficserver/squid.blog_tmp
+        cmd = ['mv',FILE_PATH_BLOG,FILE_PATH_BLOG_TMP]
+        print(cmd,)
+        runCommand(cmd, return_stdout = False, busy_wait = True)
+        
+        #traffic_logcat /usr/local/var/log/trafficserver/squid.blog_tmp -o ./squid.log.elasticsearch
+        cmd = ['traffic_logcat',FILE_PATH_BLOG_TMP,'-o',FILE_PATH]
+        print(cmd,)
+        runCommand(cmd, return_stdout = False, busy_wait = True)
+        
+        result = os.path.isfile(FILE_PATH) #double check FILE_PATH exists
+        
+        #rm -f /usr/local/var/log/trafficserver/squid.blog_tmp
+        cmd = ['rm','-f', FILE_PATH_BLOG_TMP]
+        print(cmd,)
+        runCommand(cmd, return_stdout = False, busy_wait = True)
+
     return result
 
-
-if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
-    print("Inserting...")
-    indexPrepare()
-    indexBulkData()
+#Main function    
+if __name__ == '__main__':
+    if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
+        print("Inserting...")
+        indexPrepare()
+        indexBulkData()
 
 
