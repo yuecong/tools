@@ -5,10 +5,10 @@ from elasticsearch import helpers
 import os.path
 import psutil
 import subprocess
+import time
 
 #Log data information
 FILE_PATH_BLOG = "/usr/local/var/log/trafficserver/squid.blog"
-FILE_PATH_BLOG_TMP ="/usr/local/var/log/trafficserver/squid.blog_tmp"
 FILE_PATH = "./squid.log.elasticsearch"
 
 #ES information
@@ -150,6 +150,7 @@ def indexBulkData():
             #print(" response: '%s'" % (res))
             line_cnt =0
             bulk_data = []
+    logFile.close()
     #print(bulk_data)
     if len(bulk_data) >0:
         #print bulk_data
@@ -184,7 +185,7 @@ def runCommand(cmd, use_shell = False, return_stdout = False, busy_wait = False,
         returncode = proc.poll()
         if returncode == None:
             try:
-                data = proc.as_dict(attrs = ['get_io_counters', 'get_cpu_times'])
+                data = proc.as_dict(attrs = ['io_counters', 'cpu_times'])
             except Exception as e:
                 pass
             time.sleep(poll_duration)
@@ -206,35 +207,28 @@ def runCommand(cmd, use_shell = False, return_stdout = False, busy_wait = False,
 def prepareLogFile():
     result = True
     result = os.path.isfile(FILE_PATH_BLOG)
-    if os.path.isfile(FILE_PATH)
+    if os.path.isfile(FILE_PATH):
         #rm -f ./squid.log.elasticsearch
         cmd = ['rm','-f', FILE_PATH]
-        print(cmd,)
+        #print(cmd,)
         runCommand(cmd, return_stdout = False, busy_wait = True)
     if result: #In case squid.blog exsits
-        #mv /usr/local/var/log/trafficserver/squid.blog /usr/local/var/log/trafficserver/squid.blog_tmp
-        cmd = ['mv',FILE_PATH_BLOG,FILE_PATH_BLOG_TMP]
-        print(cmd,)
-        runCommand(cmd, return_stdout = False, busy_wait = True)
         
-        #traffic_logcat /usr/local/var/log/trafficserver/squid.blog_tmp -o ./squid.log.elasticsearch
-        cmd = ['traffic_logcat',FILE_PATH_BLOG_TMP,'-o',FILE_PATH]
-        print(cmd,)
+        #traffic_logcat /usr/local/var/log/trafficserver/squid.blog -o ./squid.log.elasticsearch
+        cmd = ['traffic_logcat',FILE_PATH_BLOG,'-o',FILE_PATH]
+        #print(cmd,)
         runCommand(cmd, return_stdout = False, busy_wait = True)
-        
         result = os.path.isfile(FILE_PATH) #double check FILE_PATH exists
         
-        #rm -f /usr/local/var/log/trafficserver/squid.blog_tmp
-        cmd = ['rm','-f', FILE_PATH_BLOG_TMP]
-        print(cmd,)
-        runCommand(cmd, return_stdout = False, busy_wait = True)
-
+        f = open(FILE_PATH_BLOG,'w') #clear the contents
+        f.close()
+ 
     return result
 
 #Main function    
 if __name__ == '__main__':
     if prepareLogFile(): #if squid.blog exists and converted to squid.log.elasticsearch with traffic_logcat sucessfully
-        print("Inserting...")
+        #print("Inserting...")
         indexPrepare()
         indexBulkData()
 
