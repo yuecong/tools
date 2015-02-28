@@ -1,0 +1,3820 @@
+{
+   "took": 10,
+   "timed_out": false,
+   "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+   },
+   "hits": {
+      "total": 13491,
+      "max_score": 0,
+      "hits": []
+   },
+   "aggregations": {
+      "accessTime_5m": {
+         "buckets": [
+            {
+               "key_as_string": "2015-02-27T11:35:00.000Z",
+               "key": 1425036900000,
+               "doc_count": 869,
+               "hit_ratio": {
+                  "value": 0.5132336018411968
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 446,
+                        "sum_cache_size": {
+                           "value": 40337560
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 423,
+                        "sum_cache_size": {
+                           "value": 209261995
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:30:00.000Z",
+               "key": 1425036600000,
+               "doc_count": 2483,
+               "hit_ratio": {
+                  "value": 0.7221103503826017
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 1793,
+                        "sum_cache_size": {
+                           "value": 115861596
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 690,
+                        "sum_cache_size": {
+                           "value": 151622883
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:25:00.000Z",
+               "key": 1425036300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:20:00.000Z",
+               "key": 1425036000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:15:00.000Z",
+               "key": 1425035700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:10:00.000Z",
+               "key": 1425035400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:05:00.000Z",
+               "key": 1425035100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T11:00:00.000Z",
+               "key": 1425034800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:55:00.000Z",
+               "key": 1425034500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:50:00.000Z",
+               "key": 1425034200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:45:00.000Z",
+               "key": 1425033900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:40:00.000Z",
+               "key": 1425033600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:35:00.000Z",
+               "key": 1425033300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:30:00.000Z",
+               "key": 1425033000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:25:00.000Z",
+               "key": 1425032700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:20:00.000Z",
+               "key": 1425032400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:15:00.000Z",
+               "key": 1425032100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:10:00.000Z",
+               "key": 1425031800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:05:00.000Z",
+               "key": 1425031500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:00:00.000Z",
+               "key": 1425031200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:55:00.000Z",
+               "key": 1425030900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:50:00.000Z",
+               "key": 1425030600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:45:00.000Z",
+               "key": 1425030300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:40:00.000Z",
+               "key": 1425030000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:35:00.000Z",
+               "key": 1425029700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:30:00.000Z",
+               "key": 1425029400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:25:00.000Z",
+               "key": 1425029100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:20:00.000Z",
+               "key": 1425028800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:15:00.000Z",
+               "key": 1425028500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:10:00.000Z",
+               "key": 1425028200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:05:00.000Z",
+               "key": 1425027900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:00:00.000Z",
+               "key": 1425027600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:55:00.000Z",
+               "key": 1425027300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:50:00.000Z",
+               "key": 1425027000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:45:00.000Z",
+               "key": 1425026700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:40:00.000Z",
+               "key": 1425026400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:35:00.000Z",
+               "key": 1425026100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:30:00.000Z",
+               "key": 1425025800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:25:00.000Z",
+               "key": 1425025500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:20:00.000Z",
+               "key": 1425025200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:15:00.000Z",
+               "key": 1425024900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:10:00.000Z",
+               "key": 1425024600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:05:00.000Z",
+               "key": 1425024300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:00:00.000Z",
+               "key": 1425024000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:55:00.000Z",
+               "key": 1425023700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:50:00.000Z",
+               "key": 1425023400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:45:00.000Z",
+               "key": 1425023100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:40:00.000Z",
+               "key": 1425022800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:35:00.000Z",
+               "key": 1425022500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:30:00.000Z",
+               "key": 1425022200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:25:00.000Z",
+               "key": 1425021900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:20:00.000Z",
+               "key": 1425021600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:15:00.000Z",
+               "key": 1425021300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:10:00.000Z",
+               "key": 1425021000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:05:00.000Z",
+               "key": 1425020700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:00:00.000Z",
+               "key": 1425020400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:55:00.000Z",
+               "key": 1425020100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:50:00.000Z",
+               "key": 1425019800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:45:00.000Z",
+               "key": 1425019500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:40:00.000Z",
+               "key": 1425019200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:35:00.000Z",
+               "key": 1425018900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:30:00.000Z",
+               "key": 1425018600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:25:00.000Z",
+               "key": 1425018300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:20:00.000Z",
+               "key": 1425018000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:15:00.000Z",
+               "key": 1425017700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:10:00.000Z",
+               "key": 1425017400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:05:00.000Z",
+               "key": 1425017100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:00:00.000Z",
+               "key": 1425016800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:55:00.000Z",
+               "key": 1425016500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:50:00.000Z",
+               "key": 1425016200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:45:00.000Z",
+               "key": 1425015900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:40:00.000Z",
+               "key": 1425015600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:35:00.000Z",
+               "key": 1425015300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:30:00.000Z",
+               "key": 1425015000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:25:00.000Z",
+               "key": 1425014700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:20:00.000Z",
+               "key": 1425014400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:15:00.000Z",
+               "key": 1425014100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:10:00.000Z",
+               "key": 1425013800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:05:00.000Z",
+               "key": 1425013500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:00:00.000Z",
+               "key": 1425013200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:55:00.000Z",
+               "key": 1425012900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:50:00.000Z",
+               "key": 1425012600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:45:00.000Z",
+               "key": 1425012300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:40:00.000Z",
+               "key": 1425012000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:35:00.000Z",
+               "key": 1425011700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:30:00.000Z",
+               "key": 1425011400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:25:00.000Z",
+               "key": 1425011100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:20:00.000Z",
+               "key": 1425010800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:15:00.000Z",
+               "key": 1425010500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:10:00.000Z",
+               "key": 1425010200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:05:00.000Z",
+               "key": 1425009900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:00:00.000Z",
+               "key": 1425009600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:55:00.000Z",
+               "key": 1425009300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:50:00.000Z",
+               "key": 1425009000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:45:00.000Z",
+               "key": 1425008700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:40:00.000Z",
+               "key": 1425008400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:35:00.000Z",
+               "key": 1425008100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:30:00.000Z",
+               "key": 1425007800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:25:00.000Z",
+               "key": 1425007500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:20:00.000Z",
+               "key": 1425007200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:15:00.000Z",
+               "key": 1425006900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:10:00.000Z",
+               "key": 1425006600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:05:00.000Z",
+               "key": 1425006300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:00:00.000Z",
+               "key": 1425006000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:55:00.000Z",
+               "key": 1425005700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:50:00.000Z",
+               "key": 1425005400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:45:00.000Z",
+               "key": 1425005100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:40:00.000Z",
+               "key": 1425004800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:35:00.000Z",
+               "key": 1425004500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:30:00.000Z",
+               "key": 1425004200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:25:00.000Z",
+               "key": 1425003900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:20:00.000Z",
+               "key": 1425003600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:15:00.000Z",
+               "key": 1425003300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:10:00.000Z",
+               "key": 1425003000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:05:00.000Z",
+               "key": 1425002700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:00:00.000Z",
+               "key": 1425002400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:55:00.000Z",
+               "key": 1425002100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:50:00.000Z",
+               "key": 1425001800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:45:00.000Z",
+               "key": 1425001500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:40:00.000Z",
+               "key": 1425001200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:35:00.000Z",
+               "key": 1425000900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:30:00.000Z",
+               "key": 1425000600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:25:00.000Z",
+               "key": 1425000300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:20:00.000Z",
+               "key": 1425000000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:15:00.000Z",
+               "key": 1424999700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:10:00.000Z",
+               "key": 1424999400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:05:00.000Z",
+               "key": 1424999100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:00:00.000Z",
+               "key": 1424998800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:55:00.000Z",
+               "key": 1424998500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:50:00.000Z",
+               "key": 1424998200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:45:00.000Z",
+               "key": 1424997900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:40:00.000Z",
+               "key": 1424997600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:35:00.000Z",
+               "key": 1424997300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:30:00.000Z",
+               "key": 1424997000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:25:00.000Z",
+               "key": 1424996700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:20:00.000Z",
+               "key": 1424996400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:15:00.000Z",
+               "key": 1424996100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:10:00.000Z",
+               "key": 1424995800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:05:00.000Z",
+               "key": 1424995500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:00:00.000Z",
+               "key": 1424995200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:55:00.000Z",
+               "key": 1424994900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:50:00.000Z",
+               "key": 1424994600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:45:00.000Z",
+               "key": 1424994300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:40:00.000Z",
+               "key": 1424994000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:35:00.000Z",
+               "key": 1424993700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:30:00.000Z",
+               "key": 1424993400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:25:00.000Z",
+               "key": 1424993100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:20:00.000Z",
+               "key": 1424992800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:15:00.000Z",
+               "key": 1424992500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:10:00.000Z",
+               "key": 1424992200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:05:00.000Z",
+               "key": 1424991900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:00:00.000Z",
+               "key": 1424991600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:55:00.000Z",
+               "key": 1424991300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:50:00.000Z",
+               "key": 1424991000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:45:00.000Z",
+               "key": 1424990700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:40:00.000Z",
+               "key": 1424990400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:35:00.000Z",
+               "key": 1424990100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:30:00.000Z",
+               "key": 1424989800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:25:00.000Z",
+               "key": 1424989500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:20:00.000Z",
+               "key": 1424989200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:15:00.000Z",
+               "key": 1424988900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:10:00.000Z",
+               "key": 1424988600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:05:00.000Z",
+               "key": 1424988300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:00:00.000Z",
+               "key": 1424988000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:55:00.000Z",
+               "key": 1424987700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:50:00.000Z",
+               "key": 1424987400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:45:00.000Z",
+               "key": 1424987100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:40:00.000Z",
+               "key": 1424986800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:35:00.000Z",
+               "key": 1424986500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:30:00.000Z",
+               "key": 1424986200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:25:00.000Z",
+               "key": 1424985900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:20:00.000Z",
+               "key": 1424985600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:15:00.000Z",
+               "key": 1424985300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:10:00.000Z",
+               "key": 1424985000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:05:00.000Z",
+               "key": 1424984700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:00:00.000Z",
+               "key": 1424984400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:55:00.000Z",
+               "key": 1424984100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:50:00.000Z",
+               "key": 1424983800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:45:00.000Z",
+               "key": 1424983500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:40:00.000Z",
+               "key": 1424983200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:35:00.000Z",
+               "key": 1424982900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:30:00.000Z",
+               "key": 1424982600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:25:00.000Z",
+               "key": 1424982300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:20:00.000Z",
+               "key": 1424982000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:15:00.000Z",
+               "key": 1424981700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:10:00.000Z",
+               "key": 1424981400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:05:00.000Z",
+               "key": 1424981100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:00:00.000Z",
+               "key": 1424980800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:55:00.000Z",
+               "key": 1424980500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:50:00.000Z",
+               "key": 1424980200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:45:00.000Z",
+               "key": 1424979900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:40:00.000Z",
+               "key": 1424979600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:35:00.000Z",
+               "key": 1424979300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:30:00.000Z",
+               "key": 1424979000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:25:00.000Z",
+               "key": 1424978700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:20:00.000Z",
+               "key": 1424978400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:15:00.000Z",
+               "key": 1424978100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:10:00.000Z",
+               "key": 1424977800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:05:00.000Z",
+               "key": 1424977500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:00:00.000Z",
+               "key": 1424977200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:55:00.000Z",
+               "key": 1424976900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:50:00.000Z",
+               "key": 1424976600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:45:00.000Z",
+               "key": 1424976300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:40:00.000Z",
+               "key": 1424976000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:35:00.000Z",
+               "key": 1424975700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:30:00.000Z",
+               "key": 1424975400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:25:00.000Z",
+               "key": 1424975100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:20:00.000Z",
+               "key": 1424974800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:15:00.000Z",
+               "key": 1424974500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:10:00.000Z",
+               "key": 1424974200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:05:00.000Z",
+               "key": 1424973900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:00:00.000Z",
+               "key": 1424973600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:55:00.000Z",
+               "key": 1424973300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:50:00.000Z",
+               "key": 1424973000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:45:00.000Z",
+               "key": 1424972700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:40:00.000Z",
+               "key": 1424972400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:35:00.000Z",
+               "key": 1424972100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:30:00.000Z",
+               "key": 1424971800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:25:00.000Z",
+               "key": 1424971500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:20:00.000Z",
+               "key": 1424971200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:15:00.000Z",
+               "key": 1424970900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:10:00.000Z",
+               "key": 1424970600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:05:00.000Z",
+               "key": 1424970300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:00:00.000Z",
+               "key": 1424970000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:55:00.000Z",
+               "key": 1424969700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:50:00.000Z",
+               "key": 1424969400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:45:00.000Z",
+               "key": 1424969100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:40:00.000Z",
+               "key": 1424968800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:35:00.000Z",
+               "key": 1424968500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:30:00.000Z",
+               "key": 1424968200000,
+               "doc_count": 5424,
+               "hit_ratio": {
+                  "value": 0.6045353982300885
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 3279,
+                        "sum_cache_size": {
+                           "value": 239754991
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 2145,
+                        "sum_cache_size": {
+                           "value": 712927413
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:25:00.000Z",
+               "key": 1424967900000,
+               "doc_count": 1360,
+               "hit_ratio": {
+                  "value": 0.8558823529411764
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 1164,
+                        "sum_cache_size": {
+                           "value": 74125374
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 196,
+                        "sum_cache_size": {
+                           "value": 16674025
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:20:00.000Z",
+               "key": 1424967600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:15:00.000Z",
+               "key": 1424967300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:10:00.000Z",
+               "key": 1424967000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:05:00.000Z",
+               "key": 1424966700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:00:00.000Z",
+               "key": 1424966400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:55:00.000Z",
+               "key": 1424966100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:50:00.000Z",
+               "key": 1424965800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:45:00.000Z",
+               "key": 1424965500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:40:00.000Z",
+               "key": 1424965200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:35:00.000Z",
+               "key": 1424964900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:30:00.000Z",
+               "key": 1424964600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:25:00.000Z",
+               "key": 1424964300000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:20:00.000Z",
+               "key": 1424964000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:15:00.000Z",
+               "key": 1424963700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:10:00.000Z",
+               "key": 1424963400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:05:00.000Z",
+               "key": 1424963100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:00:00.000Z",
+               "key": 1424962800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:55:00.000Z",
+               "key": 1424962500000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:50:00.000Z",
+               "key": 1424962200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:45:00.000Z",
+               "key": 1424961900000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:40:00.000Z",
+               "key": 1424961600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:35:00.000Z",
+               "key": 1424961300000,
+               "doc_count": 7,
+               "hit_ratio": {
+                  "value": 0
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 0,
+                        "doc_count": 7,
+                        "sum_cache_size": {
+                           "value": 4297
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:30:00.000Z",
+               "key": 1424961000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:25:00.000Z",
+               "key": 1424960700000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:20:00.000Z",
+               "key": 1424960400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:15:00.000Z",
+               "key": 1424960100000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:10:00.000Z",
+               "key": 1424959800000,
+               "doc_count": 3341,
+               "hit_ratio": {
+                  "value": 0.6548937443879078
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 2188,
+                        "sum_cache_size": {
+                           "value": 160688764
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 1153,
+                        "sum_cache_size": {
+                           "value": 360265655
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:05:00.000Z",
+               "key": 1424959500000,
+               "doc_count": 7,
+               "hit_ratio": {
+                  "value": 0.2857142857142857
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 0,
+                        "doc_count": 5,
+                        "sum_cache_size": {
+                           "value": 995273
+                        }
+                     },
+                     {
+                        "key": 1,
+                        "doc_count": 2,
+                        "sum_cache_size": {
+                           "value": 190118
+                        }
+                     }
+                  ]
+               }
+            }
+         ]
+      },
+      "accessTime_1h": {
+         "buckets": [
+            {
+               "key_as_string": "2015-02-27T11:00:00.000Z",
+               "key": 1425034800000,
+               "doc_count": 3352,
+               "hit_ratio": {
+                  "value": 0.6679594272076372
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 2239,
+                        "sum_cache_size": {
+                           "value": 156199156
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 1113,
+                        "sum_cache_size": {
+                           "value": 360884878
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T10:00:00.000Z",
+               "key": 1425031200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T09:00:00.000Z",
+               "key": 1425027600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T08:00:00.000Z",
+               "key": 1425024000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T07:00:00.000Z",
+               "key": 1425020400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T06:00:00.000Z",
+               "key": 1425016800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T05:00:00.000Z",
+               "key": 1425013200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T04:00:00.000Z",
+               "key": 1425009600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T03:00:00.000Z",
+               "key": 1425006000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T02:00:00.000Z",
+               "key": 1425002400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T01:00:00.000Z",
+               "key": 1424998800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-27T00:00:00.000Z",
+               "key": 1424995200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T23:00:00.000Z",
+               "key": 1424991600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T22:00:00.000Z",
+               "key": 1424988000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T21:00:00.000Z",
+               "key": 1424984400000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T20:00:00.000Z",
+               "key": 1424980800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T19:00:00.000Z",
+               "key": 1424977200000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T18:00:00.000Z",
+               "key": 1424973600000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T17:00:00.000Z",
+               "key": 1424970000000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T16:00:00.000Z",
+               "key": 1424966400000,
+               "doc_count": 6784,
+               "hit_ratio": {
+                  "value": 0.6549233490566038
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 4443,
+                        "sum_cache_size": {
+                           "value": 313880365
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 2341,
+                        "sum_cache_size": {
+                           "value": 729601438
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T15:00:00.000Z",
+               "key": 1424962800000,
+               "doc_count": 0,
+               "hit_ratio": {
+                  "value": null
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": []
+               }
+            },
+            {
+               "key_as_string": "2015-02-26T14:00:00.000Z",
+               "key": 1424959200000,
+               "doc_count": 3355,
+               "hit_ratio": {
+                  "value": 0.6527570789865872
+               },
+               "size_access_info": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                     {
+                        "key": 1,
+                        "doc_count": 2190,
+                        "sum_cache_size": {
+                           "value": 160878882
+                        }
+                     },
+                     {
+                        "key": 0,
+                        "doc_count": 1165,
+                        "sum_cache_size": {
+                           "value": 361265225
+                        }
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}
