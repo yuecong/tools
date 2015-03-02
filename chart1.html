@@ -29,7 +29,7 @@ body {
 <script>
 
 //data will be used for scale and Unit, data1 will only be used for drawing for simple implementation
-function drawNewLineChart(chartInfo,data,data1) {
+function drawNewLineChart(chartInfo,data,data1,isUpdate) {
 /*var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -39,6 +39,7 @@ var aa = chartInfo.margin.top;
 var margin = chartInfo.margin,
     width = chartInfo.position.width - margin.left - margin.right,
     height = chartInfo.position.height - margin.top - margin.bottom;
+
 var x = d3.time.scale()
     .range([0, width]);
 
@@ -57,28 +58,51 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.value); });
 
-var div =d3.select("body").append("div")
-     .attr("id",chartInfo.name);
-var svg = div.append("svg")
-    .attr("x",chartInfo.position.x)
-    .attr("y",chartInfo.position.y)
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var svg,g_xaxis,g_yaxis,g_path_line,g_path_line1;
+
+  if (isUpdate == false)  { //create new document
+    svg = d3.select("body").append("svg")
+        .attr("id",chartInfo.name)
+        .attr("x",chartInfo.position.x)
+        .attr("y",chartInfo.position.y)
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    //Title
+    svg.append("text")
+         .attr("x",width/2)
+         .style("text-anchor", "middle")
+         .style("font","bold 16px Verdana, Helvetica, Arial, sans-serif")
+         .text(chartInfo.title.title)    
+  } else {
+  svg = d3.select("#"+chartInfo.name)
+    .data(data);
+  }
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain(d3.extent(data, function(d) { return d.value; }));
-
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
+  //X Axis
+  if (isUpdate == false) {
+    g_xaxis = svg.append("g");
+    g_yaxis = svg.append("g");
+    g_path_line = svg.append("path");
+  } else {
+    g_xaxis=svg.select("x axis");
+    g_yaxis=svg.select("y axis");
+    g_path_line = svg.select("line");
+  }
+  g_xaxis
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis)
     .append("text")
       .attr("x", width + 6)
       .attr("y", -6)
       .style("text-anchor", "end")
       .text(chartInfo.title.xAxis);
-  svg.append("g")
+  
+  //Y Axis
+  g_yaxis
       .attr("class", "y axis")
       .call(yAxis)
     .append("text")
@@ -88,23 +112,22 @@ var svg = div.append("svg")
       .style("text-anchor", "end")
       .text(chartInfo.title.yAxis);
 
-  svg.append("path")
+  g_path_line
       .datum(data)
       .attr("class", "line")
       .attr("d", line);
 
   if (data1) {
-    svg.append("path")
+    if (isUpdate == false) {
+      g_path_line1 = svg.append("path") 
+    }  else {
+      g_path_line1 = svg.select("line1")
+    }
+    g_path_line1
       .datum(data1)
       .attr("class", "line1")
       .attr("d", line);
   }
-  svg.append("text")
-       .attr("x",width/2)
-       .style("text-anchor", "middle")
-       .style("font","bold 16px Verdana, Helvetica, Arial, sans-serif")
-       .text(chartInfo.title.title)
-
 }
 
 chart_hit_ratio_5m= {
@@ -166,7 +189,7 @@ function getData(Jsondata){
   dataSet_5m.forEach(function(d) {
       if (cnt < MAX_DATA_NUM) {
         //data_hit_ratio_5m  Cache hit ratio per 5 minutes
-        data_hit_ratio_5m.push({"date":parseDate(d.key_as_string),"value":+d.hit_ratio.value});
+        data_hit_ratio_5m.push({"date":parseDate(d.key_as_string),"value":+d.hit_ratio.value*100});
         //data_access_5m total access number per 5 minutes
         data_access_5m.push({"date":parseDate(d.key_as_string),"value":+d.doc_count});
         //hit access number per 5 minutes
@@ -197,7 +220,7 @@ function getData(Jsondata){
   dataSet_1h.forEach(function(d) {
       if (cnt < MAX_DATA_NUM) {
         //data_hit_ratio_1h  Cache hit ratio per 1 hour
-        data_hit_ratio_1h.push({"date":parseDate(d.key_as_string),"value":+d.hit_ratio.value});
+        data_hit_ratio_1h.push({"date":parseDate(d.key_as_string),"value":+d.hit_ratio.value*100});
         //data_access_1h total access number per 1 hour
         data_access_1h.push({"date":parseDate(d.key_as_string),"value":+d.doc_count});
         //hit access number per hour
@@ -223,25 +246,28 @@ function getData(Jsondata){
     }
   );
 }
-function drawData(){
+var tmp_cnt =0;
+function drawData(isUpdate){
+  if (tmp_cnt > 100) return ;
   d3.json("cache_info1.json", function(err,Jsondata) {
       getData(Jsondata);
+      console.log(tmp_cnt);
       //5 minutes chart
-      drawNewLineChart(chart_hit_ratio_5m,data_hit_ratio_5m,null);
-      drawNewLineChart(chart_access_5m,data_access_5m,data_access_hit_5m); 
-      drawNewLineChart(chart_request_size_5m,data_request_size_5m,data_request_size_hit_5m);
+      drawNewLineChart(chart_hit_ratio_5m,data_hit_ratio_5m,null,isUpdate);
+      drawNewLineChart(chart_access_5m,data_access_5m,data_access_hit_5m,isUpdate); 
+      drawNewLineChart(chart_request_size_5m,data_request_size_5m,data_request_size_hit_5m,isUpdate);
       //1 hour chart
-      drawNewLineChart(chart_hit_ratio_1h,data_hit_ratio_1h,null);
-      drawNewLineChart(chart_access_1h,data_access_1h,data_access_hit_1h); 
-      drawNewLineChart(chart_request_size_1h,data_request_size_1h,data_request_size_hit_1h);
-      /*
+      drawNewLineChart(chart_hit_ratio_1h,data_hit_ratio_1h,null,isUpdate);
+      drawNewLineChart(chart_access_1h,data_access_1h,data_access_hit_1h,isUpdate); 
+      drawNewLineChart(chart_request_size_1h,data_request_size_1h,data_request_size_hit_1h,isUpdate);
       setInterval(function() {
-        drawData();
+        drawData(true); //From second, just update the data inside the document
       }, 5000);
-      */
+  
   });
+tmp_cnt++;
 }
 
-drawData();
+drawData(false); // First time is to create new chart
 
 </script>
