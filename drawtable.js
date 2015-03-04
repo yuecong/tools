@@ -73,8 +73,7 @@ function drawTableData(){
     if (drawTopCacheMissTable_falg>0) drawTopCacheMissTable(); //make sure all initilization of google chart library is ready.
   });
 }
-
 drawTableData();
 setInterval(function() {
     drawTableData();
-  }, 1000*20);
+  }, 1000*10);

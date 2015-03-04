@@ -33,10 +33,8 @@ function drawNewLineChart(chartInfo,data,data1,isUpdate) {
   if (isUpdate == false)  { //create new document
     svg = d3.select("#chart_container").append("svg")
     .attr("id",chartInfo.name)
-    .attr("x",chartInfo.position.x)
-    .attr("y",chartInfo.position.y)
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", (width + margin.left + margin.right) +"px")
+    .attr("height", (height + margin.top + margin.bottom)+"px")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     //Title
