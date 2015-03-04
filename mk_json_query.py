@@ -8,7 +8,9 @@ import time
 import json
 
 #JSON export for further data visulization
-FILE_PATH_JSON1 = "/var/www/cache_info1.json"
+FILE_PATH_JSON_HITINFO = "/var/www/cache_info1.json"
+FILE_PATH_JSON_TOP_REQUEST_URL = "/var/www/toprequestURL.json"
+FILE_PATH_JSON_TOP_MISS_URL = "/var/www/topchachemissURL.json"
 
 #ES information
 ES_HOST = {
@@ -19,7 +21,7 @@ INDEX_NAME = 'ats'
 TYPE_NAME = 'accesslog'
 POLL_INTERVAL = 10 #10 seconds
 
-mBody = {
+mBody_hitInfo = {
   "query": {
     "filtered": {
       "query": {
@@ -98,7 +100,75 @@ mBody = {
     }
   }
 }
-
+mBody_topRequestURLInfo = {
+  "size": 0,
+  "aggs": {
+    "top_request_URL": {
+      "terms": {
+        "field": "requestURL",
+        "size": 10,
+        "order": {
+          "_count": "desc"
+        }
+      },
+      "aggs": {
+          "spentTime_stats": {
+            "stats": {
+              "field": "spentTime"
+            }
+          },
+        "cache_ratio": {
+          "avg": {
+            "field": "cacheCode"
+          }
+        },
+        "contentSize": {
+          "avg": {
+            "field": "contentLength"
+          }
+        }
+      }
+    }
+  }
+}
+mBody_topCacheMissURLInfo = {
+  "query": {
+    "filtered": {
+      "query": {
+        "match_all": {}
+      },
+      "filter": {
+        "term": {
+          "cacheCode": 0
+        }
+      }
+    }
+  },
+  "size": 0,
+  "aggs": {
+    "top_request_URL": {
+      "terms": {
+        "field": "requestURL",
+        "size": 10,
+        "order": {
+          "_count": "desc"
+        }
+      },
+      "aggs": {
+        "spentTime_stats": {
+          "stats": {
+            "field": "spentTime"
+          }
+        },
+        "contentSize": {
+          "avg": {
+            "field": "contentLength"
+          }
+        }
+      }
+    }
+  }
+}
 
 # create ES client, create index
 es = Elasticsearch(hosts = [ES_HOST])
@@ -114,7 +184,9 @@ def exportInfo(mBody,filePath):
 #Main function    
 if __name__ == '__main__':
     while (True):  
-        exportInfo(mBody,FILE_PATH_JSON1)
+        exportInfo(mBody_hitInfo,FILE_PATH_JSON_HITINFO)
+        exportInfo(mBody_topRequestURLInfo,FILE_PATH_JSON_TOP_REQUEST_URL)
+        exportInfo(mBody_topCacheMissURLInfo,FILE_PATH_JSON_TOP_MISS_URL)
         time.sleep(POLL_INTERVAL)
 
 
