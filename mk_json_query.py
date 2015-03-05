@@ -11,15 +11,17 @@ import json
 FILE_PATH_JSON_HITINFO = "/var/www/cache_info1.json"
 FILE_PATH_JSON_TOP_REQUEST_URL = "/var/www/toprequestURL.json"
 FILE_PATH_JSON_TOP_MISS_URL = "/var/www/topchachemissURL.json"
+FILE_PATH_JSON_SYSINFO = "/var/www/sysinfo.json"
 
 #ES information
 ES_HOST = {
     "host" : "10.0.0.158", 
     "port" : 9200
 }
-INDEX_NAME = 'ats'
-TYPE_NAME = 'accesslog'
-POLL_INTERVAL = 10 #10 seconds
+INDEX_ATS = 'ats'
+INDEX_ATS_SYS = 'ats_sysinfo'
+
+POLL_INTERVAL = 5 #5 seconds
 
 mBody_hitInfo = {
   "query": {
@@ -170,12 +172,26 @@ mBody_topCacheMissURLInfo = {
   }
 }
 
+mBody_sysInfo ={
+  "query": {
+    "match_all": {}
+  },
+   "size": 1,
+   "sort": [
+     {
+       "timeStamp": {
+         "order": "desc"
+       }
+     }
+   ]
+}
+
 # create ES client, create index
 es = Elasticsearch(hosts = [ES_HOST])
 
-def exportInfo(mBody,filePath):
+def exportInfo(index_for_query,mBody,filePath):
     #print (mBody)
-    res = es.search(index = INDEX_NAME, size=0, body = mBody)
+    res = es.search(index = index_for_query, size=1, body = mBody)
     #print(res)
     f = open(filePath,'w') #clear the contents
     f.write(json.dumps(res))
@@ -184,9 +200,10 @@ def exportInfo(mBody,filePath):
 #Main function    
 if __name__ == '__main__':
     while (True):  
-        exportInfo(mBody_hitInfo,FILE_PATH_JSON_HITINFO)
-        exportInfo(mBody_topRequestURLInfo,FILE_PATH_JSON_TOP_REQUEST_URL)
-        exportInfo(mBody_topCacheMissURLInfo,FILE_PATH_JSON_TOP_MISS_URL)
+        exportInfo(INDEX_ATS,mBody_hitInfo,FILE_PATH_JSON_HITINFO)
+        exportInfo(INDEX_ATS,mBody_topRequestURLInfo,FILE_PATH_JSON_TOP_REQUEST_URL)
+        exportInfo(INDEX_ATS,mBody_topCacheMissURLInfo,FILE_PATH_JSON_TOP_MISS_URL)
+        exportInfo(INDEX_ATS_SYS,mBody_sysInfo,FILE_PATH_JSON_SYSINFO)
         time.sleep(POLL_INTERVAL)
 
 
