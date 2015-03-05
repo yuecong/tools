@@ -19,13 +19,14 @@ function drawGauge() {
   };
   var chart_hit,chart_cpu;
   gauge_data_hit= [['Label', 'Value'],
-               ['5min hit', hit_5m],
-               ['1hour hit ', hit_1h]
+               ['5min hit(%)', hit_5m],
+               ['1hour hit(%) ', hit_1h]
               ];
   gauge_data_cpu= [['Label', 'Value'],
-               ['CPU ', 30],
-               ['Memmory', 50],
-               ['Network', 10]
+               ['CPU(%)', 30],
+               ['Mem(%)', 50],
+               ['Sent(kBps)', 10],
+               ['Recv(kBps)', 20]
               ];
   chart_hit = new google.visualization.Gauge(document.getElementById('data_hit_ratio_gauge'));
   chart_cpu = new google.visualization.Gauge(document.getElementById('cpu_info'));
