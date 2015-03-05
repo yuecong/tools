@@ -24,23 +24,29 @@ body {
   stroke-width: 1.5px;
 }
 #gauge_container,#table_container {height: 100%; width:100%; font-size: 0;}
-#data_hit_ratio_gauge,#cpu_info,#table_toprequesturl,#table_topcachemissurl {display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
+#data_hit_ratio_gauge,#cpu_mem_info,#network_info,#table_toprequesturl,#table_topcachemissurl {display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
 </style>
 <head>
 <script src="http://d3js.org/d3.v3.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="drawgauge.js"></script>
 <script type="text/javascript" src="drawline.js"></script>
+<script type="text/javascript" src="drawgauge.js"></script>
 <script type="text/javascript" src="drawtable.js"></script>
 <script>
-var data_hit_ratio_5m=[];
-var data_hit_ratio_1h=[];
+google.load("visualization", "1", {packages:["gauge","table"]});
+//When google charts package is loaded
+
+google.setOnLoadCallback(drawTableData);
+google.setOnLoadCallback(drawSysInfo);
+google.setOnLoadCallback(drawChartData);
+
 </script>
 <head>
 <body>
   <div id="gauge_container">
     <div id="data_hit_ratio_gauge"></div>
-    <div id="cpu_info"></div>
+    <div id="cpu_mem_info"></div>
+    <div id="network_info"></div>
   </div>
   <div id="chart_container" style="width: 100%; height: 50%;"></div>
   <div id="table_container">

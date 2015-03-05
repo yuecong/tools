@@ -169,7 +169,6 @@ var data_access_hit_1h=[];
 var data_request_size_hit_1h=[];
 var data_request_size_1h=[]; 
 
-
 function getData(Jsondata){
   var cnt =0;
   var MAX_DATA_NUM = 10;  
@@ -249,21 +248,12 @@ function getData(Jsondata){
     }
     );
 }
-
-start_time_chart =Date.now();
-tmp_cnt_chart=0;
-enable_update_flag_chart =1;
-
+var isUpdate =false;
 function drawChartData(){
-  if (enable_update_flag_chart == 0) return;
-  if ((Date.now() - start_time_chart < 5 * 1000) && (tmp_cnt_chart >0)) return;
-  isUpdate = false;
-  if (tmp_cnt_chart >0) isUpdate = true;
   d3.json("cache_info1.json", function(err,Jsondata) {
     getData(Jsondata);
-    //for gauge drawing
-    if (data_hit_ratio_5m.length > 0) hit_5m = Math.floor(data_hit_ratio_5m[0].value);
-    if (data_hit_ratio_1h.length > 0) hit_1h = Math.floor(data_hit_ratio_1h[0].value);
+    //for gauge drawing (hit ratio)
+    drawGauge_hit();
     //5 minutes chart
     drawNewLineChart(chart_hit_ratio_5m,data_hit_ratio_5m,null,isUpdate);
     drawNewLineChart(chart_access_5m,data_access_5m,data_access_hit_5m,isUpdate); 
@@ -272,11 +262,10 @@ function drawChartData(){
     drawNewLineChart(chart_hit_ratio_1h,data_hit_ratio_1h,null,isUpdate);
     drawNewLineChart(chart_access_1h,data_access_1h,data_access_hit_1h,isUpdate); 
     drawNewLineChart(chart_request_size_1h,data_request_size_1h,data_request_size_hit_1h,isUpdate);
-    tmp_cnt_chart++;
-    enable_update_flag_chart =1;
-    start_time_chart =Date.now();
-    });
-  enable_update_flag_chart =0;
+    isUpdate =true;
+  });
 }
 
-d3.timer(drawChartData);
+setInterval(function() {
+    drawChartData();
+  }, 1000*5);
