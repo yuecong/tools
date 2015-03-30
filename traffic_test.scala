@@ -15,7 +15,7 @@ def readURL()= {
   } finally {
   val processTime = (System.nanoTime - now) /1000/1000; //million seconds
   totalTime = List(totalTime,processTime).max;
-  println(" Total Process Time: %d secs".format(totalTime));
+  println(" Total Process Time: %d ms".format(totalTime));
   }
 }
 // get URL cocurrently 
