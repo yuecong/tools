@@ -14,9 +14,10 @@ url_num = 0
 # Define an output queue
 output = mp.Queue()
 
-MAX_THREAD_NUM = 700
+MAX_THREAD_NUM = 500
 
-proxy_url='10.0.0.204:80'
+#proxy_url='10.0.0.204:80'
+proxy_url=''
 urls = [
      'http://drbd.linbit.com/home/what-is-drbd/',
      'http://drbd.linbit.com/home/what-is-ha/',
@@ -33,6 +34,7 @@ def getInfoForCurl(url,proxy=''):
     start_time = time.time()
     if len(proxy) >0:
         cmd = ['curl','--proxy',proxy,url]
+        print(cmd)
     else:
         cmd = ['curl',url]
     runCommand(cmd, return_stdout = False, busy_wait = True)
