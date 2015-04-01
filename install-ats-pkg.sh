@@ -13,4 +13,6 @@ cd /root/trafficserver-5.2.0
 ./configure 
 make
 make install
-
+#Disable iptables to make 80 can be accessable
+/etc/init.d/iptables stop
+/etc/init.d/iptables save
