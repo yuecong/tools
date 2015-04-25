@@ -18,17 +18,20 @@ object trafficTest {
 
     val urls_sample = Seq("http://openvswitch.org/","http://www.alliedtelesis.com","http://www.alliedtelesis.com");
     val urls = List.fill(test_count_concurrent)(urls_sample).flatten.take(test_count_concurrent) // get the test urls
-    println(urls)
+    //println(urls)
     val seq_read_urls = urls.map(url => Future(readURL(url)))
     //val seq_read_urls = List (Future(readURL("https://www.yahoo.com/")) ,Future(readURL("http://www.alliedtelesis.com")))
     val read_url_tests = Future sequence seq_read_urls
+    println("Testing....")
+    val start_total = System.nanoTime
     val process_times = concurrent.Await.result(read_url_tests, 10.minutes)
-
+    println("=========Test result===========")
     println("Test Count:" + process_times.length)
     println("Min:" + process_times.min +"ms")
     println("Avg:" + process_times.sum / process_times.length +"ms")
     println("Max:" + process_times.max +"ms")
-    println("Total:" + process_times.sum +"ms")
+    val total_process_time = (System.nanoTime - start_total) /1000/1000 
+    println("Total:" + total_process_time +"ms")
 
 
 }
