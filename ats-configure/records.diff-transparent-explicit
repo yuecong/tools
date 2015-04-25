@@ -1,0 +1,42 @@
+23,26c23
+< #AT
+< CONFIG proxy.config.http.server_ports STRING 8080:tr-full
+< #CONFIG proxy.config.http.server_ports STRING 8080
+< #CONFIG proxy.config.http.server_ports STRING 80
+---
+> CONFIG proxy.config.http.server_ports STRING 80
+32c29
+< CONFIG proxy.config.http.insert_response_via_str INT 0
+---
+> CONFIG proxy.config.http.insert_response_via_str INT 2
+100d96
+< #CONFIG proxy.config.http.cache.required_headers INT 2
+139a136
+> CONFIG proxy.config.log.logfile_dir STRING var/log/trafficserver
+145d141
+< #CONFIG proxy.config.url_remap.remap_required INT 1
+150c146
+< CONFIG proxy.config.reverse_proxy.enabled INT 1
+---
+> CONFIG proxy.config.reverse_proxy.enabled INT 0
+169c165
+< CONFIG proxy.config.diags.debug.enabled INT 0
+---
+> CONFIG proxy.config.diags.debug.enabled INT 1
+177,180c173,176
+< ##############################################################################
+< LOCAL proxy.local.cluster.type INT 3
+< CONFIG proxy.config.cluster.ethernet_interface STRING lo
+< #CONFIG proxy.config.cluster.ethernet_interface STRING br0
+---
+> #############################################################################
+> LOCAL proxy.local.cluster.type INT 1
+> CONFIG proxy.config.proxy_name STRING EtherCache
+> CONFIG proxy.config.cluster.ethernet_interface STRING eth1
+185a182,187
+> #HTTP UI
+> CONFIG proxy.config.http_ui_enabled INT 1
+> #IGNORE
+> CONFIG proxy.config.http.cache.ignore_authentication INT 1
+> CONFIG proxy.config.http.cache.ignore_server_no_cache INT 1
+> CONFIG proxy.config.cluster.cluster_configuration STRING cluster.config
